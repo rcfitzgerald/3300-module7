@@ -125,6 +125,75 @@
           The union had 68,288 observations, and the intersect had 12,288
           observations. A description of each variable is contained in Table 1.
         </p>
+        <p class="table-label">Table 1 Data Dictionary</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Column</th>
+              <th>Type</th>
+              <th>Source</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>game_title</td>
+              <td>Text</td>
+              <td>both</td>
+              <td>Title of game</td>
+            </tr>
+            <tr>
+              <td>platform</td>
+              <td>Text</td>
+              <td>both</td>
+              <td>
+                Abbreviation of the video game console used to play the game
+              </td>
+            </tr>
+            <tr>
+              <td>publisher</td>
+              <td>Text</td>
+              <td>VGChartz</td>
+              <td>The publisher of the video game</td>
+            </tr>
+            <tr>
+              <td>na_sales</td>
+              <td>Numeric</td>
+              <td>VGChartz</td>
+              <td>The number of units sold in North America</td>
+            </tr>
+            <tr>
+              <td>total_sales</td>
+              <td>Numeric</td>
+              <td>VGChartz</td>
+              <td>The total number of units sold worldwide</td>
+            </tr>
+            <tr>
+              <td>summary</td>
+              <td>Text</td>
+              <td>Metacritic</td>
+              <td>A description of the video game</td>
+            </tr>
+            <tr>
+              <td>release_date</td>
+              <td>Date</td>
+              <td>both</td>
+              <td>The month and year that the game was released</td>
+            </tr>
+            <tr>
+              <td>meta_score</td>
+              <td>Numeric</td>
+              <td>Metacritic</td>
+              <td>The review score as decided on by game critics</td>
+            </tr>
+            <tr>
+              <td>user_score</td>
+              <td>Numeric</td>
+              <td>Metacritic</td>
+              <td>The review score as decided on by the users of Metacritic</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <section id="analysis">
@@ -161,24 +230,6 @@
           This may be part of the reason why the meta score has a slightly
           better correlation with sales than the user score.
         </p>
-<<<<<<< HEAD
-=======
-        <figure>
-          <img
-            src="images/1-scores_boxplot.png"
-            alt="Boxplots comparing meta score
-          and user score"
-          />
-          <figcaption>Figure 1 Review Scores Boxplots.</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images/2-review_scores_histogram.png"
-            alt="Review Scores Histogram"
-          />
-          <figcaption>Figure 2 Review Score Histograms.</figcaption>
-        </figure>
->>>>>>> add_figures
         <p>
           The meta score is a better predictor of sales than the user score.
           While the correlation isn’t very strong, it does exist. There is some
@@ -212,48 +263,12 @@
           project folder.
         </p>
         <p>
-<<<<<<< HEAD
-=======
-          I noticed that all but one publisher released at least 800 games. I
-          calculated the correlation between the total sales and the number of
-          games a publisher had released. The coefficient of correlation between
-          these two variables was .715, which demonstrates a strong correlation
-          between the number of games released and the total sales of a
-          publisher. Because of this strong correlation, I thought creating a
-          scatterplot between the two variables would be useful to analyze the
-          data further. The scatterplot can be seen in Figure 3 below.
-        </p>
-        <figure>
-          <img
-            src="images/3-total_sales_number_games_released.jpg"
-            alt="Number of games released vs total sales"
-          />
-          <figcaption>
-            Figure 3 Scatterplot of the number of games by a publisher and their
-            total sales.
-          </figcaption>
-        </figure>
-        <p>
->>>>>>> add_figures
           This correlation does not apply to the number of games released and
           the publisher’s average meta score. The correlation coefficient
           between these two variables is -.013, which is evidence of no
           relationship between the number of games released and the average meta
           score.
         </p>
-<<<<<<< HEAD
-=======
-        <figure>
-          <img
-            src="images/4-metascore_number_games_released.jpg"
-            alt="Comparing Meta Score and Number of Games Released"
-          />
-          <figcaption>
-            Figure 4 Scatterplot of the number of games by a publisher and meta
-            score.
-          </figcaption>
-        </figure>
->>>>>>> add_figures
         <p>
           With the strong correlation between the number of games and total
           sales, we can predict that a company’s average meta score doesn’t
@@ -297,18 +312,6 @@
           pattern between the number of games released and total sales. This
           scatterplot can be seen in Figure 5.
         </p>
-<<<<<<< HEAD
-=======
-        <figure>
-          <img
-            src="images/5-number_of_games_released_and_total_sales_by_month.png"
-            alt="Number of Games Released and Total Video Game Sales by Month"
-          />
-          <figcaption>
-            Figure 5 Number of Games Released and Total Sales by Month
-          </figcaption>
-        </figure>
->>>>>>> add_figures
         <p>
           The point at the end should be ignored, as it includes two games yet
           to be released. The outlier of games released in 2020 should also be
@@ -334,16 +337,6 @@
           release date, which has a correlation coefficient of .229. Figure 6
           shows a graph comparing the sales to the release date.
         </p>
-<<<<<<< HEAD
-=======
-        <figure>
-          <img
-            src="images/6-total_sales_by_release_date.jpg"
-            alt="Sales of Video Games over time"
-          />
-          <figcaption>Figure 6 Total Sales by Release Date.</figcaption>
-        </figure>
->>>>>>> add_figures
         <p>
           The trend of frequent outliers appears to be much greater for total
           sales than it is for North American sales. Taking a slice_max of both
@@ -355,16 +348,6 @@
           this timeframe. While there was an increase in sales throughout the
           2000s, the same cannot be said about review scores.
         </p>
-<<<<<<< HEAD
-=======
-        <figure>
-          <img
-            src="images/7-review_scores_by_release_date.jpg"
-            alt="Rating of Video Games Over Time"
-          />
-          <figcaption>Figure 7 Review Scores by Release Date.</figcaption>
-        </figure>
->>>>>>> add_figures
         <p>
           Figure 7 shows that the review scores of games see a sharp decrease
           beginning in 2000. However, the meta scores decreased much more
